@@ -90,12 +90,12 @@ const coinsButtons = () => {
         });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const modalThirdTriggered = getCookie('modalThirdTriggered');
-        if (modalThirdTriggered === 'true') {
-            modalTrigger('modalThird');
-        }
-    });
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     const modalThirdTriggered = getCookie('modalThirdTriggered');
+    //     if (modalThirdTriggered === 'true') {
+    //         modalTrigger('modalThird');
+    //     }
+    // });
 };
 
 (function() {
