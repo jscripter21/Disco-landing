@@ -79,7 +79,7 @@ const coinsButtons = () => {
         clickedButton.classList.add('coin-crown');
         setTimeout(() => {
             modalTrigger('modalThird');
-            setCookie('modalThirdTriggered', 'true', 365);
+            // setCookie('modalThirdTriggered', 'false', 365);
         }, 200);
         clickedButton.setAttribute('disabled', 'true');
 
