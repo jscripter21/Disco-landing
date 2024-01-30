@@ -632,7 +632,7 @@ button:focus-visible {
     }
     .game__sloterra {
         width: 300px;
-        right: -30px
+        right: 5px;
     }
 }
 
