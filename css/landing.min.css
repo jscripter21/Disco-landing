@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
+@font-face {
+    font-family: "Johnny-Pistolas";
+    src: url("../fonts/Johnny-Pistolas.woff2") format("woff2"), url("../fonts/Johnny-Pistolas.woff") format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+.star {
+    --size: 20vmin;
+    --holes: calc(var(--size)*.495);
+    width: var(--size);
+    aspect-ratio: 1/1;
+    position: fixed;
+    background: white;
+    --mask: radial-gradient(var(--holes) at var(--holes) var(--holes), #0000 99%, #000) calc(var(--holes)*-1) calc(var(--holes)*-1);
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    border-radius: 50%;
+    animation: sparkle 1s linear forwards;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.iziModal-overlay {
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(15px) !important;
+}
+
+.modal {
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.modal .modal__inner {
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.modal-first {
+    text-align: center;
+}
+
+.modal-first .modal__inner {
+    background-image: url("../img/popups/popup-bg-1.png");
+    width: 561px;
+    height: 435px;
+    display: inline-block;
+    text-align: left;
+}
+
+.modal-first .modal__button {
+    top: 336px;
+}
+
+.modal-second .modal__inner {
+    background-image: url("../img/popups/popup-bg-2.png");
+    width: 561px;
+    height: 435px;
+    display: inline-block;
+    text-align: left;
+}
+
+.modal-second .modal__button {
+    top: 340px;
+}
+
+.modal-third .modal__inner {
+    background-image: url("../img/popups/popup-bg-3.png");
+    width: 561px;
+    height: 435px;
+    display: inline-block;
+    text-align: left;
+}
+
+.modal-third .modal__button {
+    top: 345px;
+}
+
+.modal__button {
+    position: relative;
+    text-align: center
+}
+
+.modal__button-inner {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    text-align: center;
+    background: radial-gradient(1089.78% 167.27% at 50.7% 2.31%, #FF0C72 0%, #C20023 70.67%, #77001D 100%);
+    border-radius: 76px;
+    border: 4px solid #67ADFF;
+    box-shadow: 0px 4px 17px 0px #083181;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 25px 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 35px;
+    line-height: 1;
+    min-width: 300px;
+}
+
+.modal__button-inner:hover {
+    -webkit-transform: scale(.97);
+    -ms-transform: scale(.97);
+    transform: scale(.97)
+}
+
+@media (max-width:855px) {
+    .button {
+        font-size: 16px;
+        padding: 20px 45px
+    }
+    .modal .modal__inner {
+        margin: 0;
+    }
+    /* .modal-second .modal__inner {
+        width: 590px;
+        height: 660px;
+    } */
+    /* .modal-second .modal__button {
+        top: 435px;
+    } */
+    .modal-second .modal__button-inner {
+        min-width: 189px;
+        font-size: 35px;
+    }
+    /* .modal-third .modal__inner {
+        width: 692px;
+        height: 660px;
+    } */
+    /* .modal-third .modal__button {
+        top: 425px;
+    } */
+    .modal-third .modal__button-inner {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:570px) {
+    .modal-first .modal__inner {
+        width: 428px;
+        height: 342px;
+    }
+    .modal-first .modal__button {
+        top: 260px;
+    }
+    .modal__button-inner {
+        padding: 20px 35px;
+        font-size: 25px;
+        min-width: 257px;
+    }
+    .modal-second .modal__inner {
+        width: 428px;
+        height: 342px;
+    }
+    .modal-second .modal__button {
+        top: 270px;
+    }
+    .modal-second .modal__button-inner {
+        font-size: 25px;
+        min-width: 237px;
+        padding: 20px 35px;
+    }
+    .modal-third .modal__inner {
+        width: 428px;
+        height: 342px;
+    }
+    .modal-third .modal__button {
+        top: 270px;
+    }
+    .modal-third .modal__button-inner {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:420px) {
+    .modal-first .modal__inner {
+        width: 320px;
+        height: 260px;
+    }
+    .modal-first .modal__button {
+        top: 190px;
+    }
+    .modal-first .modal__button-inner {
+        min-width: 135px;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .modal-second .modal__inner {
+        width: 320px;
+        height: 260px;
+    }
+    .modal-second .modal__button {
+        top: 200px;
+    }
+    .modal-second .modal__button-inner {
+        min-width: 135px;
+        font-size: 20px;
+    }
+    .modal-third .modal__inner {
+        width: 320px;
+        height: 260px;
+    }
+    .modal-third .modal__button {
+        top: 200px;
+    }
+    .modal-third .modal__button-inner {
+        padding: 20px 25px;
+        font-size: 18px;
+        min-width: 198px;
+    }
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    background-image: url("../img/bg/background.png");
+    background-repeat: no-repeat;
+    background-position: 10% center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden
+}
+
+body.overlay-2::before {
+    content: "";
+    position: fixed;
+    background: -o-radial-gradient(50% 50%, 64% 50%, rgba(47, 255, 180, 0.7) 0%, rgba(0, 92, 59, 0.7) 48.09%, rgba(0, 0, 0, 0.7) 0%);
+    background: radial-gradient(64% 50% at 50% 50%, rgba(47, 255, 180, 0.7) 0%, rgba(0, 92, 59, 0.7) 48.09%, rgba(0, 0, 0, 0.7) 0%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 998
+}
+
+body.overlay-3::before {
+    content: "";
+    position: fixed;
+    background: -o-radial-gradient(50% 50%, 64% 50%, rgba(47, 255, 180, 0.7) 0%, rgba(0, 92, 59, 0.7) 48.09%, rgba(0, 0, 0, 0.7) 0%);
+    background: radial-gradient(64% 50% at 50% 50%, rgba(47, 255, 180, 0.7) 0%, rgba(0, 92, 59, 0.7) 48.09%, rgba(0, 0, 0, 0.7) 0%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 998
+}
+
+main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    outline: none
+}
+
+a:focus-visible {
+    outline: solid
+}
+
+p,
+span,
+ul,
+ol,
+li,
+input,
+textarea {
+    font-family: "Montserrat", sans-serif;
+    color: #000
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    color: #000
+}
+
+h1 {
+    font-size: 7rem;
+    line-height: 6rem;
+    font-weight: 700
+}
+
+h2 {
+    font-size: 6rem
+}
+
+h3 {
+    font-size: 2rem
+}
+
+h4 {
+    font-size: 1.6rem
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #000;
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s
+}
+
+button:focus-visible {
+    outline: solid
+}
+
+.container {
+    max-width: 830px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+.scroll-block {
+    overflow: hidden
+}
+
+@-webkit-keyframes coinsPulsation {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+}
+
+@keyframes coinsPulsation {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+}
+
+.game__inner {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow-x: hidden
+}
+
+.game__wrapper {
+    max-width: 830px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 100;
+}
+
+.game__main-inner {
+    position: relative;
+    z-index: 20;
+}
+
+.game__logo {
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 60px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.game__logo-link {
+    width: 300px;
+}
+
+.game__logo-img {
+    width: 100%;
+}
+
+.game__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.game__main-inner {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 15px 80px;
+    width: 700px;
+    height: 700px;
+}
+
+.game__main-button {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    outline: none;
+    background-image: url("../img/pumpkins/pumpkin.gif");
+    filter: drop-shadow(0px 0px 20px rgba(255, 74, 139, 0.8));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    -webkit-animation: coinsPulsation 1s linear infinite alternate;
+    animation: coinsPulsation 1s linear infinite alternate;
+}
+
+.header_text-img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.game__main-button.coin-try-more {
+    background-image: url("../img/pumpkins/pumpkin-open.gif");
+}
+
+.game__main-button.coin-luck {
+    background-image: url("../img/pumpkins/pumpkin-open.gif");
+}
+
+.game__main-button.coin-crown {
+    background-image: url("../img/pumpkins/pumpkin-open.gif");
+}
+
+.game__main-button:hover {
+    -webkit-transform: scale(.97);
+    -ms-transform: scale(.97);
+    transform: scale(.97)
+}
+
+.game__main-button:disabled {
+    cursor: default
+}
+
+.game__main-button:disabled:hover {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+}
+
+.game__info {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    position: relative;
+    padding-bottom: 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 29, 19, 0)), color-stop(14.76%, rgba(43, 29, 19, 0.32)), color-stop(38.72%, rgba(43, 26, 13, 0.59)), to(#150f0a));
+    background: -o-linear-gradient(top, rgba(43, 29, 19, 0) 0%, rgba(43, 29, 19, 0.32) 14.76%, rgba(43, 26, 13, 0.59) 38.72%, #150f0a 100%);
+    background: linear-gradient(180deg, rgba(43, 29, 19, 0) 0%, rgba(43, 29, 19, 0.32) 14.76%, rgba(43, 26, 13, 0.59) 38.72%, #150f0a 100%);
+    z-index: 10
+}
+
+.game__sloterra {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.game__sloterra img {
+    width: 100%;
+}
+
+.game__partners {
+    position: relative;
+    text-align: center;
+    max-width: 980px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 10
+}
+
+.game__copyright {
+    position: relative;
+    font-size: 10px;
+    line-height: 1.3;
+    font-weight: 300;
+    color: #fff;
+    max-width: 830px;
+    margin: 0 auto;
+    padding: 0 15px;
+    z-index: 10
+}
+
+.game__partners-img {
+    width: 130px;
+}
+
+@media (max-width:1440px),
+(max-height:800px) {
+    .game__sloterra {
+        width: 470px;
+        right: -120px;
+    }
+}
+
+@media (max-width:1024px) {
+    .game__sloterra {
+        width: 400px;
+        right: -100px;
+    }
+    .game__logo-link {
+        width: 200px;
+    }
+    .game__main {
+        margin-bottom: 130px
+    }
+    .game__main-inner {
+        gap: 20px 50px;
+        width: 600px;
+        height: 420px
+    }
+    .game__main-button {
+        width: 140px;
+        height: 140px
+    }
+    .game__partners-link {
+        width: 120px;
+    }
+}
+
+@media (max-width:768px) {
+    .game__sloterra img {
+        margin-bottom: -5px;
+    }
+    .game__sloterra {
+        width: 320px;
+        right: -50px;
+    }
+    .game__partners-link {
+        width: 90px;
+    }
+}
+
+@media (max-width:630px) {
+    .game__main {
+        width: 100%;
+        height: 100vw;
+        margin-bottom: 5%;
+    }
+    .game__main-inner {
+        gap: 15px 10px;
+        width: 94vw;
+        height: 65%;
+        margin-top: 5%;
+        padding-bottom: 0
+    }
+    .game__main-button {
+        width: 25%;
+        height: 30%;
+        margin-top: -5px
+    }
+    .game__partners-link {
+        width: 100px;
+    }
+    .game__partners-img {
+        width: 100%
+    }
+    .game__sloterra {
+        width: 300px;
+        right: -30px
+    }
+}
+
+@media (max-width:450px) {
+    .game__logo-link {
+        width: 150px
+    }
+}
+
+@media (max-height:500px) {
+    .game__sloterra {
+        width: 250px;
+        right: -60px
+    }
+}
